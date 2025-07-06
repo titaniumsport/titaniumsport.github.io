@@ -1,0 +1,287 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Darts - Titanium Darts</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .site-header {
+      background: #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 2px solid #e60000;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: #e60000;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .menu-button {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .popup-menu {
+      position: fixed;
+      top: 70px;
+      right: 20px;
+      background: rgba(20, 20, 20, 0.95);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      border: 1px solid #444;
+    }
+
+    .popup-menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .popup-menu a:hover { color: #e60000; }
+
+    .header-buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .header-left,
+    .header-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 1rem;
+    }
+
+    .header-left {
+      left: 10%;
+    }
+
+    .header-right {
+      right: 9%;
+    }
+
+    .header-button {
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: 2px solid #e60000;
+      border-radius: 20px;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .header-button:hover {
+      background: #e60000;
+      color: #fff;
+    }
+
+    .content-wrapper {
+      padding: 9rem 2rem 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .subheading {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      margin-top: -1.2rem;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .box {
+      background: #1b1b1b;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .box img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .box-content {
+      padding: 1rem;
+      border-top: 1px solid #333;
+    }
+
+    .box-title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .box-meta {
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 1024px) {
+      .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <a class="header-button" href="darts.html">Darts</a>
+      <a class="header-button" href="football.html">Football</a>
+      <a class="header-button" href="fighting.html">Fighting</a>
+    </div>
+    <a href="index.html" style="text-decoration: none;"><h1>TITANIUM DARTS</h1></a>
+    <div class="header-right">
+      <a class="header-button" href="motorsports.html">Motorsports</a>
+      <a class="header-button" href="other.html">Other</a>
+      <a class="header-button" href="247page.html">24/7 TV</a>
+    </div>
+
+  </header>
+
+  <div class="content-wrapper">
+    <div class="subheading">Darts Channels</div>
+    <div class="content-grid">
+      <a class="box" href="dartevent1.html">
+        <img src="dartpic1.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">Players Championship 20</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="dartevent2.html">
+        <img src="dartpic1.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">Players Championship 21</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="darts.html">
+        <img src="soon.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">COMING SOON</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="darts.html">
+        <img src="soon.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">COMING SOON</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="darts.html">
+        <img src="soon.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">COMING SOON</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="darts.html">
+        <img src="soon.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">COMING SOON</div>
+          <div class="box-meta">Darts</div>
+        </div>
+      </a>
+
+      <a class="box" href="https://discord.gg/ZnKrs5gAJz" target=blank>
+        <img src="discord.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">Titanium Discord</div>
+          <div class="box-meta">Join the community</div>
+        </div>
+      </a>
+
+      <a class="box" href="https://www.gofundme.com/f/titanium-discord" target="_blank">
+        <img src="donate.jpg" alt="Match Image">
+        <div class="box-content">
+          <div class="box-title">Donate</div>
+          <div class="box-meta">Support our services</div>
+        </div>
+      </a>
+    </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("popupMenu");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    document.addEventListener("click", function (e) {
+      const menu = document.getElementById("popupMenu");
+      const button = document.querySelector(".menu-button");
+      if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
